@@ -1,5 +1,5 @@
 .header {
-    background-color: #282c34;
+    background-color: #11282d;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -47,7 +47,7 @@
     width: 0;
     height: 2px;
     background-color: aqua;
-    transition: width 0.3s ease;
+    transition: width 0.7s ease;
   }
   
   .nav-list a:hover::after {
@@ -96,7 +96,7 @@
       display: none;
       flex-direction: column;
       width: 100%;
-      background-color: #282c34;
+      background-color: #11282d;
       position: absolute;
       top: 60px; /* Dostosuj do wysokości headera */
       left: 0;
