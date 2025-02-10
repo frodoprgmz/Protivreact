@@ -1,10 +1,13 @@
 import React from 'react';
-
+import "./css/Home.css";
 function Home() {
   return (
-    <div className="page">
-      <h1>Strona Główna</h1>
-      <p>Witajcie na stronie naszej firmy! Tworzymy nowoczesne strony internetowe.</p>
+    <div className="container">
+      <div className='content-first'>
+        <p>Zajmujemy się tworzeniem zaawansowanych</p>
+        <p>stron internetowych</p>
+         
+      </div>
     </div>
   );
 }
