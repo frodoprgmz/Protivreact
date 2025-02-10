@@ -26,16 +26,32 @@
   
   .nav-list li {
     margin: 0 1rem;
+    position: relative; /* Potrzebne do animacji linii */
   }
   
   .nav-list a {
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
+    position: relative; /* Potrzebne do animacji linii */
+    padding: 0.5rem 0; /* Dodaj padding, aby linia miała miejsce */
+    display: block; /* Rozciągnij link na cały obszar */
   }
   
-  .nav-list a:hover {
-    text-decoration: underline;
+  /* Animacja linii pod elementem menu (duże ekrany) */
+  .nav-list a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: aqua;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-list a:hover::after {
+    width: 100%; /* Rozwijanie linii */
   }
   
   /* Przycisk hamburgera */
@@ -67,13 +83,12 @@
     .logo {
       width: 100%;
       text-align: center;
- 
     }
   
     .menu-toggle {
       display: flex;
       position: absolute;
- /* Dostosuj do wysokości headera */
+      top: 1rem; /* Dostosuj do wysokości headera */
       right: 1rem; /* Umieszczamy po prawej stronie */
     }
   
@@ -92,5 +107,27 @@
   
     .nav-list.active {
       display: flex;
+    }
+  
+    .nav-list li {
+      padding: 0; /* Usuwamy padding z <li> */
+      width: 100%;
+      text-align: center;
+    }
+  
+    /* Rozciągamy link na cały obszar <li> */
+    .nav-list a {
+      padding: 20px; /* Dodaj padding do linku */
+      display: block; /* Rozciągnij link na cały obszar */
+    }
+  
+    /* Zmiana tła po najechaniu na element menu (małe ekrany) */
+    .nav-list li:hover {
+      background-color: black;
+      transition: background-color 0.3s ease;
+    }
+  
+    .nav-list a:hover {
+      color: aqua;
     }
   }
