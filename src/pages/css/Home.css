@@ -61,12 +61,13 @@ p {
   padding: 10px;
   border-radius: 50px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.5s;
   margin-top: 40px;
 }
 
 .see-more:hover {
-  color: #8e8e8e;
-  transition: 0.3s;
-  border: 2px solid #8e8e8e;
+  color: aqua;
+  transition: 0.5s;
+  border: 2px solid aqua;
+  background-color: black;
 }
