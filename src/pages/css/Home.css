@@ -1,25 +1,72 @@
-body{
-    background-color: black;
-    margin: 0;
-    padding: 0;
-    color: white;
-    
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  color: white;
 }
 
-.container{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.content-first{
-    width: 100%;
-    height: 40%;
-    font-size: 30px;
+.content-first {
+  position: relative;
+  background: url(/src/img/people-ofiice.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.see-more{
-    
+.content-first::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.758);
+  z-index: 1;
+}
+
+.content-first * {
+  position: relative;
+  z-index: 2;
+}
+
+p {
+  margin: 10px;
+}
+
+.see-more {
+  width: auto;
+  height: 35px;
+  border: 2px solid white;
+  font-size: 20px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 40px;
+}
+
+.see-more:hover {
+  color: #8e8e8e;
+  transition: 0.3s;
+  border: 2px solid #8e8e8e;
 }

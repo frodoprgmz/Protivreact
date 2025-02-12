@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  font-family: "Roboto Mono", serif;
+  font-family: "Poppins", serif;
+  user-select: none;
 }
 
 .page {
