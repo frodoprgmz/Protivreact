@@ -17,7 +17,7 @@
   font-weight: bold;
   width: 200px;
   height: 50px;
-  background: url(../img/Logo_protiv_black_font.png);
+  background: url(../../img/Logo_protiv_black_font.png);
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -109,7 +109,7 @@
     width: 100%;
     background-color: #11282d;
     position: absolute;
-    top: 60px; /* Dostosuj do wysokości headera */
+    top: 80px; /* Dostosuj do wysokości headera */
     left: 0;
     opacity: 0;
     transform: translateY(-20px);
