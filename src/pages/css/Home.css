@@ -16,7 +16,7 @@ body {
 
 .content-first {
   position: relative;
-  background: url('../../img/people-ofiice.jpg');
+  background: url("../../img/people-ofiice.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -72,6 +72,71 @@ p {
   background-color: black;
 }
 
+.social-media {
+  height: 200px;
+  width: 30px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid lightgray;
+  background-color: rgba(211, 211, 211, 0.249);
+  border-radius: 50px;
+  position: fixed;
+  right: 20px;
+  align-items: center;
+}
+
+.social-media-icon {
+  height: 30px;
+  width: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-media-icon:hover {
+  height: 40px;
+  width: 40px;
+  transition: 0.3s;
+  color: rgb(143, 229, 255);
+}
+
+.social-media-on-phone {
+  display: none;
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  width: 40px;
+  height: 40px;
+  border: 2px solid lightgray;
+  background-color: rgba(211, 211, 211, 0.249);
+  border-radius: 50px;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.social-media-on-phone.open {
+  height: 200px;
+}
+
+.social-media-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.info-icon {
+  margin-bottom: 10px;
+}
+
 .technologies {
   height: auto;
   width: 100%;
@@ -90,7 +155,7 @@ p {
   cursor: pointer;
   margin: 20px;
   position: relative;
-  overflow: hidden; /* Dodaj to, aby zapobiec przemieszczaniu się zawartości */
+  overflow: hidden;
 }
 
 .tech-inner {
@@ -99,18 +164,22 @@ p {
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.6s;
-  border: 3px solid white; /* Dodaj border tutaj */
-  border-radius: 10px; /* Dodaj border-radius, aby pasował do stylu */
-  box-sizing: border-box; /* Upewnij się, że border nie zwiększa rozmiaru */
+  border: 3px solid white;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
-.tech-card, .tech-inner, .tech-front, .tech-back {
+.tech-card,
+.tech-inner,
+.tech-front,
+.tech-back {
   box-sizing: border-box;
 }
 .tech-card.flipped .tech-inner {
   transform: rotateY(180deg);
 }
 
-.tech-front, .tech-back {
+.tech-front,
+.tech-back {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -119,7 +188,7 @@ p {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  border: 3px solid white; /* Upewnij się, że border jest ustawiony */
+  border: 3px solid white;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
@@ -137,7 +206,6 @@ p {
   font-weight: bold;
 }
 
-/* Poprawka dla responsywności */
 @media (max-width: 1000px) {
   .technologies {
     flex-direction: column;
@@ -158,6 +226,11 @@ p {
   max-width: 90%;
 }
 
-#anime .technology-logo {
-  height: 50%!important;
+@media (max-width: 768px) {
+  .social-media {
+    display: none;
+  }
+  .social-media-on-phone {
+    display: flex;
+  }
 }
