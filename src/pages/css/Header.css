@@ -1,5 +1,5 @@
 .header {
-  background-color: #11282dc1;
+  background-color: #000000c1;
   padding: 1rem 0;
   display: flex;
   justify-content: space-between;
@@ -107,7 +107,7 @@
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: #11282dc1;
+    background-color: #000000c1;
     position: absolute;
     top: 80px; /* Dostosuj do wysokości headera */
     left: 0;
