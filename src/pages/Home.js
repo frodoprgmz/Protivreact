@@ -5,6 +5,7 @@ import animeLogo from "../img/anime-logo.png";
 import mysqlLogo from "../img/mysql-logo.png";
 import { Instagram, Facebook, Linkedin, Info } from "lucide-react";
 
+
 function Home() {
   const [flipped, setFlipped] = useState({
     react: false,
@@ -29,9 +30,9 @@ function Home() {
     <>
       <div className="container">
         <div className="content-first">
-          <p>Zajmujemy się tworzeniem zaawansowanych</p>
-          <p>stron internetowych</p>
-          <div className="see-more">Dowiedz się więcej</div>
+          <p>STWORZYMY STRONĘ WWW</p>
+          <p>DLA <a id="ty">CIEBIE</a> </p>
+          {/* <div className="see-more">Dowiedz się więcej</div> */}
           <div className="social-media">
             <Instagram className="social-media-icon" />
             <Facebook className="social-media-icon" />
