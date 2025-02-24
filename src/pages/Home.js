@@ -3,7 +3,7 @@ import "./css/Home.css";
 import reactLogo from "../img/react-logo.png";
 import animeLogo from "../img/anime-logo.png";
 import mysqlLogo from "../img/mysql-logo.png";
-import { Instagram, Facebook, Linkedin, Info } from "lucide-react";
+import { Instagram, Facebook, Linkedin, Info, Github  } from "lucide-react";
 
 
 function Home() {
@@ -37,6 +37,7 @@ function Home() {
             <Instagram className="social-media-icon" />
             <Facebook className="social-media-icon" />
             <Linkedin className="social-media-icon" />
+            <Github className="social-media-icon" />
           </div>
           <div className={`social-media-on-phone ${isOpen ? "open" : ""}`}>
             <div className="social-media-icons">
@@ -45,6 +46,7 @@ function Home() {
                   <Instagram className="social-media-icon" />
                   <Facebook className="social-media-icon" />
                   <Linkedin className="social-media-icon" />
+                  <Github className="social-media-icon" />
                 </>
               )}
             </div>

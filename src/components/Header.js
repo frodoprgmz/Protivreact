@@ -16,7 +16,7 @@ function Header() {
   }, []);
 
   const resetMenuForLargeScreens = () => {
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 855) {
       anime.set(navRef.current, {
         translateX: '0%',
         opacity: 1,
@@ -27,7 +27,7 @@ function Header() {
   };
 
   const hideMenuForSmallScreens = () => {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 855) {
       anime.set(navRef.current, {
         translateX: '100%',
         opacity: 0,
@@ -39,7 +39,7 @@ function Header() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 768) {
+      if (window.innerWidth > 855) {
         resetMenuForLargeScreens();
       } else {
         hideMenuForSmallScreens();
@@ -51,7 +51,7 @@ function Header() {
   }, []);
 
   useEffect(() => {
-    const isMobile = window.innerWidth <= 768;
+    const isMobile = window.innerWidth <= 855;
     const navElement = navRef.current;
 
     if (isMobile) {

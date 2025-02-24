@@ -6,7 +6,7 @@ import '../css/Header.css';
 const HeaderView = ({ isMenuOpen, toggleMenu, navRef }) => {
   return (
     <header className="header">
-      <div className="logo"></div>
+      <div className="logo">PROTIV</div>
 
       <div 
         className={`menu-toggle ${isMenuOpen ? 'active' : ''}`} 
@@ -22,7 +22,7 @@ const HeaderView = ({ isMenuOpen, toggleMenu, navRef }) => {
           <li><Link to="/" onClick={toggleMenu}>Strona Główna</Link></li>
           <li><Link to="/realizations" onClick={toggleMenu}>Realizacje</Link></li>
           <li><Link to="/about" onClick={toggleMenu}>O Nas</Link></li> 
-          {/* <li><Link to="/contact" onClick={toggleMenu}>Kontakt</Link></li> */}
+          <li id='kont'><Link to="/contact" onClick={toggleMenu}>Kontakt</Link></li>
         </ul>
       </nav>
 

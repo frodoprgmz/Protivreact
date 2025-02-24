@@ -13,11 +13,11 @@
 
 .logo {
   color: white;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   width: 200px;
   height: 50px;
-  background: url(../../img/Logo_protiv_black_font.png);
+  /* background: url(../../img/Logo_protiv_black_font.png); */
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -55,7 +55,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: aqua;
+  background-color: #f4cceb;
   transition: width 0.7s ease;
 }
 
@@ -91,30 +91,43 @@
 }
 
 .contactButton{
-background-color: #FFECFB;
-color: #19162A;
+background-color: transparent;
+color: #f4cceb;
 width: 90%;
 height: 80%;
 display: flex;
 justify-content: center;
 align-items: center;
 cursor: pointer;
-border-radius: 5px;
+border-radius: 50px;
 transition: .3s;
+border: 2px solid #f4cceb;
 }
 
 .contactButton:hover{
-
+background-color: #f4cceb;
+  color: #19162A;
   transition: .3s;
 
 }
+#kont{
+  display: none;
+}
 
 /* Stylowanie dla mniejszych ekranów */
-@media (max-width: 768px) {
+@media (max-width: 855px) {
   .header {
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem 0;
+  }
+
+  .contact-now{
+    display: none;
+  }
+
+  #kont{
+    display: block;
   }
 
   .logo {
@@ -167,6 +180,6 @@ transition: .3s;
   }
 
   .nav-list a:hover {
-    color: rgb(143, 229, 255);
+    color: #f4cceb;
   }
 }
