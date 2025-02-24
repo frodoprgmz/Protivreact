@@ -1,0 +1,51 @@
+.footer{
+  background-color: #070a15;
+  height: auto;
+  width: 100%;
+}
+
+.up-section{
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.up-section-logo{
+  height: 100%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logotekst{
+  font-size: 3.5rem;
+  font-weight: 300;
+}
+
+.up-section-info{
+  height: 100%;
+  width: 30%;
+}
+
+.up-section-socialmedia{
+  height: 100%;
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.left-info{
+  width: 50%;
+  height: 300px;
+  text-align: left;
+}  
+
+
+.right-info{
+  width: 50%;
+  height: 300px;
+}
+ 

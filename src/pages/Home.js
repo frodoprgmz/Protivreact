@@ -4,7 +4,7 @@ import reactLogo from "../img/react-logo.png";
 import animeLogo from "../img/anime-logo.png";
 import mysqlLogo from "../img/mysql-logo.png";
 import { Instagram, Facebook, Linkedin, Info, Github  } from "lucide-react";
-
+import Footer from '../components/Footer';
 
 function Home() {
   const [flipped, setFlipped] = useState({
@@ -107,6 +107,7 @@ function Home() {
           </div>
         </div>
       </div>
+
     </>
   );
 }
