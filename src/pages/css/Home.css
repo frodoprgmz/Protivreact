@@ -12,6 +12,8 @@ body {
   font-style: normal;
 }
 
+/* ---------------MAIN--------------- */
+
 .container {
   width: 100%;
   height: 100vh;
@@ -150,6 +152,8 @@ p {
   color: #f4cceb;
 }
 
+/* ---------------TECHNOLOGIE--------------- */
+
 .technologies {
   height: auto;
   width: 100%;
@@ -218,6 +222,12 @@ p {
   font-size: 16px;
   font-weight: bold;
 }
+
+
+
+
+
+/* ---------------MEDIA--------------- */
 
 @media (max-width: 1000px) {
   .technologies {
