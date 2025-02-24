@@ -3,10 +3,18 @@ import anime from 'animejs/lib/anime.es.js';
 import HeaderView from '../pages/views/HeaderView';
 
 function Header() {
+  document.addEventListener('scroll', function() {
+    const header = document.querySelector('.header');
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navRef = useRef(null);
 
-  // Dodaj style początkowe dla menu
   useEffect(() => {
     anime.set(navRef.current, {
       translateX: '100%',

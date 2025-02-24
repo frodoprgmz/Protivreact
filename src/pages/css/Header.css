@@ -1,5 +1,4 @@
 .header {
- 
   padding: 1rem 0;
   display: flex;
   justify-content: space-between;
@@ -9,6 +8,12 @@
   position: fixed;
   z-index: 10;
   width: 100%;
+  background: linear-gradient(to bottom, black 80%, transparent 100%);
+  transition: background 0.3s ease;
+}
+
+.header.scrolled {
+  background: black;
 }
 
 .logo {
@@ -17,7 +22,6 @@
   font-weight: bold;
   width: 200px;
   height: 50px;
-  /* background: url(../../img/Logo_protiv_black_font.png); */
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -35,19 +39,18 @@
 
 .nav-list li {
   margin: 0 1rem;
-  position: relative; /* Potrzebne do animacji linii */
+  position: relative;
 }
 
 .nav-list a {
   color: white;
   text-decoration: none;
   font-size: 1.2rem;
-  position: relative; /* Potrzebne do animacji linii */
-  padding: 0.5rem 0; /* Dodaj padding, aby linia miała miejsce */
-  display: block; /* Rozciągnij link na cały obszar */
+  position: relative;
+  padding: 0.5rem 0;
+  display: block;
 }
 
-/* Animacja linii pod elementem menu (duże ekrany) */
 .nav-list a::after {
   content: "";
   position: absolute;
@@ -60,17 +63,16 @@
 }
 
 .nav-list a:hover::after {
-  width: 100%; /* Rozwijanie linii */
+  width: 100%;
 }
 
-/* Przycisk hamburgera */
 .menu-toggle {
   display: none;
   flex-direction: column;
   cursor: pointer;
   align-items: center;
   position: relative;
-  z-index: 20; /* Upewnij się, że hamburger jest na wierzchu */
+  z-index: 20;
 }
 
 .menu-toggle span {
@@ -81,7 +83,27 @@
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.contact-now{
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.contact-now {
   width: 200px;
   height: 50px;
   display: flex;
@@ -90,43 +112,48 @@
   margin-right: 5%;
 }
 
-.contactButton{
-background-color: transparent;
-color: #f4cceb;
-width: 90%;
-height: 80%;
-display: flex;
-justify-content: center;
-align-items: center;
-cursor: pointer;
-border-radius: 50px;
-transition: .3s;
-border: 2px solid #f4cceb;
+.contactButton {
+  background-color: transparent;
+  color: #f4cceb;
+  width: 90%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: 0.3s;
+  border: 2px solid #f4cceb;
 }
 
-.contactButton:hover{
-background-color: #f4cceb;
+.contactButton:hover {
+  background-color: #f4cceb;
   color: #19162A;
-  transition: .3s;
-
+  transition: 0.3s;
 }
-#kont{
+
+#kont {
   display: none;
 }
 
-/* Stylowanie dla mniejszych ekranów */
 @media (max-width: 855px) {
   .header {
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem 0;
+    height: auto;
   }
 
-  .contact-now{
+  .header.menu-open {
+    height: 100vh;
+    background: black;
+  }
+
+  .contact-now {
     display: none;
   }
 
-  #kont{
+  #kont {
     display: block;
   }
 
@@ -140,8 +167,8 @@ background-color: #f4cceb;
   .menu-toggle {
     display: flex;
     position: absolute;
-    top: 33%; /* Dostosuj do wysokości headera */
-    right: 1rem; /* Umieszczamy po prawej stronie */
+    top: 25px;
+    right: 1rem;
   }
 
   .nav-list {
@@ -150,30 +177,29 @@ background-color: #f4cceb;
     width: 100%;
     background-color: #000000c1;
     position: absolute;
-    top: 80px; /* Dostosuj do wysokości headera */
+    top: 80px;
     left: 0;
     opacity: 0;
     transform: translateY(-20px);
-    z-index: 10; /* Upewnij się, że menu jest na wierzchu */
+    z-index: 10;
   }
 
   .nav-list.active {
     display: flex;
+    margin-top: -15px;
   }
 
   .nav-list li {
-    padding: 0; /* Usuwamy padding z <li> */
+    padding: 0;
     width: 100%;
     text-align: center;
   }
 
-  /* Rozciągamy link na cały obszar <li> */
   .nav-list a {
-    padding: 20px; /* Dodaj padding do linku */
-    display: block; /* Rozciągnij link na cały obszar */
+    padding: 20px;
+    display: block;
   }
 
-  /* Zmiana tła po najechaniu na element menu (małe ekrany) */
   .nav-list li:hover {
     background-color: black;
     transition: background-color 0.3s ease;

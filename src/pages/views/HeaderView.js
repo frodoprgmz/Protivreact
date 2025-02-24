@@ -2,14 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../css/Header.css';
 
-
 const HeaderView = ({ isMenuOpen, toggleMenu, navRef }) => {
   return (
-    <header className="header">
+    <header className={`header ${isMenuOpen ? 'menu-open' : ''}`}>
       <div className="logo">PROTIV</div>
 
-      <div 
-        className={`menu-toggle ${isMenuOpen ? 'active' : ''}`} 
+      <div
+        className={`menu-toggle ${isMenuOpen ? 'active' : ''}`}
         onClick={toggleMenu}
       >
         <span></span>
@@ -21,14 +20,14 @@ const HeaderView = ({ isMenuOpen, toggleMenu, navRef }) => {
         <ul className={`nav-list ${isMenuOpen ? 'active' : ''}`} ref={navRef}>
           <li><Link to="/" onClick={toggleMenu}>Strona Główna</Link></li>
           <li><Link to="/realizations" onClick={toggleMenu}>Realizacje</Link></li>
-          <li><Link to="/about" onClick={toggleMenu}>O Nas</Link></li> 
+          <li><Link to="/about" onClick={toggleMenu}>O Nas</Link></li>
           <li id='kont'><Link to="/contact" onClick={toggleMenu}>Kontakt</Link></li>
         </ul>
       </nav>
 
       <div className='contact-now'>
         <div className='contactButton'>
-        CONTACT NOW
+          CONTACT NOW
         </div>
       </div>
     </header>
