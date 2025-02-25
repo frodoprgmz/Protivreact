@@ -25,7 +25,7 @@ body {
 
 .content-first {
   position: relative;
-  /* background: url("../../img/people-ofiice.jpg"); */
+  background: url("../../img/background.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -55,6 +55,64 @@ body {
 .content-first * {
   position: relative;
   z-index: 2;
+}
+
+.content-texts{
+  width: 100%;
+  height: 100%;
+}
+
+.content-text1{
+width: 50%;
+height: 50%;
+font-size: 70px;
+color: white;
+display: flex;
+flex-direction: column;
+top: 30%;
+text-align: left;
+left: 5%;
+}
+
+.content-text2{
+  width: 50%;
+  height: 50%;
+  font-size: 20px;
+  text-align: left;
+  left: 5%;
+  top: 15%;
+}
+
+.quotation {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  font-size: 20px;
+  top: 10%;
+}
+
+.quotationButton {
+  background-color: transparent;
+  color: #f4cceb;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: 0.3s;
+  border: 2px solid #f4cceb;
+
+}
+
+.quotationButton:hover {
+  background-color: #f4cceb;
+  color: #19162A;
+  transition: 0.3s;
 }
 
 p {
@@ -225,9 +283,6 @@ p {
 }
 
 
-
-
-
 /* ---------------MEDIA--------------- */
 
 @media (max-width: 1000px) {
@@ -248,6 +303,35 @@ p {
   background-size: contain;
   background-repeat: no-repeat;
   max-width: 90%;
+}
+
+@media (max-width: 640px) {
+  .content-text1{
+    font-size: 50px;
+  }
+
+  .content-text2{
+    top: 10%;
+  }
+
+  .content-first{
+    background-position: 30% center;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .content-text1{
+    font-size: 40px;
+  }
+
+  .content-text2{
+    top: 4%;
+  }
+
+  .content-first{
+    background-position: 34% center;
+  }
 }
 
 @media (max-width: 768px) {

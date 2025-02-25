@@ -31,8 +31,23 @@ function Home() {
     <>
       <div className="container">
         <div className="content-first">
-          <p>STWORZYMY STRONĘ WWW</p>
-          <p>DLA <a id="ty">CIEBIE</a> </p>
+          {/* <p>STWORZYMY STRONĘ WWW</p>
+          <p>DLA <a id="ty">CIEBIE</a> </p> */}
+          <div className="content-texts">
+            <div className="content-text1">
+            <a>TWORZENIE</a>
+            <a><strong>STRON</strong></a> 
+            <a id="ty"><strong>INTERNETOWYCH</strong></a> 
+            </div>
+            <div className="content-text2">
+              <a>Zaufaj naszym umiejętnością i zleć nam projekt.<br/> Sumiennie wykonamy stronę wedle twoich preferencji</a>
+              <div className="quotation">
+                <div className='quotationButton'>
+                  SZYBKA WYCENA
+                </div>
+              </div>
+            </div>
+          </div>
           {/* <div className="see-more">Dowiedz się więcej</div> */}
           <div className="social-media">
             <Instagram className="social-media-icon" />

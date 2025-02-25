@@ -1,4 +1,4 @@
-.footer {
+/* .footer {
   background-color: #070a15;
   height: auto;
   width: 100%;
@@ -72,7 +72,7 @@
 }
 
 .social-media-icon {
-  font-size: 10px;
+
 }
 
 #Sledz {
@@ -80,7 +80,7 @@
 }
 
 .social-media-icon:hover {
-  transform: scale(110%);
+  transform: scale(102%);
   transition: 0.3s;
   color: #f4cceb;
 }
@@ -120,4 +120,143 @@
     margin-left: 5px;
   }
 }
+ */
 
+ #protiv{
+  font-size: 50px;
+  left: 1px;
+  font-weight: 200;
+  color: white;
+ }
+
+
+ .footer {
+  background-color: #070a15;
+  color: white;
+  padding: 3rem 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+
+.footer-section {
+  width: 100%;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.newsletter-input {
+  padding: 0.5rem;
+  border: 1px solid #4b5563;
+  background-color: #374151;
+  color: #ffffff;
+  flex-grow: 1;
+}
+
+.newsletter-button {
+  padding: 0.5rem 1rem;
+  background-color: #9ca3af;
+  color: #1f2937;
+  border: none;
+  cursor: pointer;
+}
+
+.newsletter-button:hover {
+  background-color: #d1d5db;
+}
+
+.footer-bottom {
+  border-top: 1px solid #374151;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+.social-media-footer {
+  font-size: 10px;
+  height: 30px;
+  width: 30px;
+  padding: 7px;
+  background-color: rgba(210, 210, 210, 0.233);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-icons{
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .footer-section {
+    width: 30%;
+    margin-bottom: 0;
+  }
+}
+
+.footer h3 {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer p {
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  color: #d1d5db;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #ffffff;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer a {
+  color: #d1d5db;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #ffffff;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .newsletter-form {
+    flex-direction: row;
+  }
+}
