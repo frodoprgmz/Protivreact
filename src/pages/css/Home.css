@@ -96,7 +96,9 @@ p {
   position: fixed;
   right: 20px;
   align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 
 .social-media-icon {
   height: 30px;
@@ -255,4 +257,27 @@ p {
   .social-media-on-phone {
     display: flex;
   }
+}
+
+
+::-webkit-scrollbar {
+  width: 10px; 
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070a15;   
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #f4cceb; 
+  border-radius: 10px; 
+  cursor: pointer;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c4afbf;
+
 }

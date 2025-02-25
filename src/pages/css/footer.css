@@ -115,4 +115,9 @@
   #social-footer {
     justify-content: center;
   }
+
+  .social-media-footer{
+    margin-left: 5px;
+  }
 }
+

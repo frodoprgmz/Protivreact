@@ -26,6 +26,7 @@ function Home() {
     setIsOpen(!isOpen);
   };
 
+
   return (
     <>
       <div className="container">
