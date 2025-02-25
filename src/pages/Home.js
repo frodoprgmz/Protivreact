@@ -37,7 +37,7 @@ function Home() {
             <div className="content-text1">
             <a>TWORZENIE</a>
             <a><strong>STRON</strong></a> 
-            <a id="ty"><strong>INTERNETOWYCH</strong></a> 
+            <a id="ty"><strong>INTERNETOWYCH HUJ</strong></a> 
             </div>
             <div className="content-text2">
               <a>Zaufaj naszym umiejętnością i zleć nam projekt.<br/> Sumiennie wykonamy stronę wedle twoich preferencji</a>
