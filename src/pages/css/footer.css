@@ -1,17 +1,18 @@
-.footer{
+.footer {
   background-color: #070a15;
   height: auto;
   width: 100%;
 }
 
-.up-section{
+.up-section {
   height: 300px;
   width: 100%;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-.up-section-logo{
+.up-section-logo {
   height: 100%;
   width: 30%;
   display: flex;
@@ -19,36 +20,27 @@
   align-items: center;
 }
 
-.logotekst{
+.logotekst {
   font-size: 3.5rem;
   font-weight: 300;
 }
 
-.up-section-info{
+.up-section-info {
   height: 100%;
   width: 30%;
   display: flex;
   flex-direction: row;
-  
 }
 
-.left-info{
-  width: 50%;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}  
-
-.right-info{
+.left-info, .right-info {
   width: 50%;
   height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
- 
-.up-section-socialmedia{
+
+.up-section-socialmedia {
   height: 100%;
   width: 30%;
   display: flex;
@@ -57,7 +49,7 @@
   justify-content: flex-end;
 }
 
-#social-footer{
+#social-footer {
   height: 40px;
   width: 200px;
   display: flex;
@@ -65,7 +57,7 @@
   align-items: center;
 }
 
-.social-media-footer{
+.social-media-footer {
   font-size: 10px;
   height: 30px;
   width: 30px;
@@ -79,15 +71,48 @@
   transition: 0.3s;
 }
 
-.social-media-icon{
+.social-media-icon {
   font-size: 10px;
 }
-#Sledz{
+
+#Sledz {
   margin-right: 5px;
 }
-.social-media-icon:hover{
-    transform: scale(110%);
-    transition: 0.3s;
-    color: #f4cceb;
+
+.social-media-icon:hover {
+  transform: scale(110%);
+  transition: 0.3s;
+  color: #f4cceb;
+}
+
+@media (max-width: 855px) {
+  .up-section {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
   }
 
+  .up-section-logo,
+  .up-section-info,
+  .up-section-socialmedia {
+    width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+
+  .up-section-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-info, .right-info {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  #social-footer {
+    justify-content: center;
+  }
+}
