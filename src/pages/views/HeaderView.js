@@ -16,6 +16,9 @@ const HeaderView = ({ isMenuOpen, toggleMenu, navRef }) => {
         <span></span>
       </div>
 
+      {/* Overlay covering the screen */}
+      <div className={`menu-overlay ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}></div>
+
       <nav>
         <ul className={`nav-list ${isMenuOpen ? 'active' : ''}`} ref={navRef}>
           <li><Link to="/" onClick={toggleMenu}>Strona Główna</Link></li>
@@ -26,9 +29,7 @@ const HeaderView = ({ isMenuOpen, toggleMenu, navRef }) => {
       </nav>
 
       <div className='contact-now'>
-        
         <Link to="/contact" onClick={toggleMenu}><div className='contactButton'>KONTAKT</div></Link>
-        
       </div>
     </header>
   );
