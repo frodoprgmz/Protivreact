@@ -58,7 +58,7 @@ function Contact() {
             <h3>Godziny Pracy</h3>
             <p>Poniedziałek - Piątek: 14:00 - 20:00</p>
             <p>Sobota: 10:00 - 15:00</p>
-            <p>Niedziela: Zakmnięte</p>
+            <p>Niedziela: Zamknięte</p>
           </div>
         </div>
       </div>
