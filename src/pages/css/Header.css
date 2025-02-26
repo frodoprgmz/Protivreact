@@ -13,7 +13,12 @@
   padding-bottom: 1.3rem;
 }
 
-
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: url('/public/fonts/SpaceGrotesk/SpaceGrotesk-Bold.ttf') format('ttf');
+  font-weight: 700;
+  font-style: normal;
+}
 
 .header.scrolled {
   background: black;
@@ -131,7 +136,11 @@
   border-radius: 50px;
   transition: 0.3s;
   border: 2px solid #f4cceb;
-
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .contact-now a{

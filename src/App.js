@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Realizations from './pages/Realizations';
-import About from './pages/About';
+import About from './pages/Onas';
 import Contact from './pages/Contact';
 import './App.css';
 

@@ -1,0 +1,274 @@
+/* Main Container */
+.about-container {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0e0e0;
+    line-height: 1.6;
+    background-color: #121212;
+  }
+  
+  /* Section Styling */
+  section {
+    padding: 60px 0;
+  }
+  
+  .section-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  h1,
+  h2,
+  h3 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  
+  h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  p {
+    margin-bottom: 15px;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    background-color: #1a1a1a;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+  }
+  
+  .hero-content p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  
+  /* Company Overview */
+  .overview-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .overview-text,
+  .overview-image {
+    flex: 1;
+  }
+  
+  .about-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Mission & Values */
+  .mission-section {
+    background-color: #1a1a1a;
+  }
+  
+  .values-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .value-card {
+    background-color: #242424;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  
+  .value-card h3 {
+    color: #f4cceb;
+  }
+  
+  /* Team Section */
+  .team-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+  }
+  
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+  }
+  
+  .team-member {
+    background-color: #242424;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .team-member:hover {
+    transform: translateY(-10px);
+  }
+  
+  .member-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .member-info {
+    padding: 20px;
+  }
+  
+  .member-position {
+    color: #f4cceb;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  
+  /* Timeline Section */
+  .timeline-section {
+    background-color: #1a1a1a;
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .timeline::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    background-color: #f4cceb;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+  }
+  
+  .timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+  }
+  
+  .timeline-item:nth-child(odd) {
+    left: 0;
+  }
+  
+  .timeline-item:nth-child(even) {
+    left: 50%;
+  }
+  
+  .timeline-dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    background-color: #242424;
+    border: 4px solid #f4cceb;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-dot {
+    left: -10px;
+  }
+  
+  .timeline-content {
+    padding: 20px;
+    background-color: #242424;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Contact CTA */
+  .contact-cta {
+    text-align: center;
+    padding: 80px 0;
+  }
+  
+  .cta-button {
+    background-color: #f4cceb;
+    color: #121212;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #e6b0d9;
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
+    .overview-layout {
+      flex-direction: row;
+    }
+  
+    .timeline-item {
+      padding: 10px 40px;
+    }
+  
+    .timeline-content {
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .timeline::after {
+      left: 31px;
+    }
+  
+    .timeline-item {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+    .timeline-item:nth-child(even) {
+      left: 0;
+    }
+  
+    .timeline-dot {
+      left: 21px;
+      right: auto;
+    }
+  
+    .timeline-item:nth-child(even) .timeline-dot {
+      left: 21px;
+    }
+  }
+  
+  
