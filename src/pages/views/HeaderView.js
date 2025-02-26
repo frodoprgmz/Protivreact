@@ -16,7 +16,7 @@ const HeaderView = ({ isMenuOpen, toggleMenu, navRef }) => {
         <span></span>
       </div>
 
-      {/* Overlay covering the screen */}
+
       <div className={`menu-overlay ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}></div>
 
       <nav>

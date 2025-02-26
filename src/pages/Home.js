@@ -1,15 +1,49 @@
-import React, { useEffect, useState } from "react";
-import anime from "animejs";
-import "./css/Home.css";
-import reactLogo from "../img/react-logo.png";
-import animeLogo from "../img/anime-logo.png";
-import mysqlLogo from "../img/mysql-logo.png";
-import { Instagram, Facebook, Linkedin, Info, Github } from "lucide-react";
-import Footer from '../components/Footer';
+"use client"
+
+import { useEffect, useRef, useState } from "react"
+import anime from "animejs"
+import "./css/Home.css"
+import reactLogo from "../img/react-logo.png"
+import animeLogo from "../img/anime-logo.png"
+import mysqlLogo from "../img/mysql-logo.png"
+import { Instagram, Facebook, Linkedin, Info, Github, ChevronLeft, ChevronRight } from "lucide-react"
+
+// At the top of the file, add these imports for background images
+import reactBg from "../img/reactbg.png" // You'll need to add these images to your project
+import animeBg from "../img/animebg.png"
+import mysqlBg from "../img/mysqlbg.png"
 
 const Home = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [expandedCard, setExpandedCard] = useState(null);
+  const [isOpen, setIsOpen] = useState(false)
+  const [expandedCard, setExpandedCard] = useState(null)
+  const techCardRefs = useRef([])
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const sliderInterval = useRef(null)
+
+  // Then update the slides array to use these background images
+  const slides = [
+    {
+      id: 1,
+      image: reactLogo,
+      title: "React",
+      description: "Tworzymy nowoczesne aplikacje internetowe z wykorzystaniem biblioteki React.",
+      background: `url(${reactBg}) center/cover no-repeat`,
+    },
+    {
+      id: 2,
+      image: animeLogo,
+      title: "Anime.js",
+      description: "Dodajemy płynne animacje dzięki lekkiej biblioteki Anime.js.",
+      background: `url(${animeBg}) center/cover no-repeat`,
+    },
+    {
+      id: 3,
+      image: mysqlLogo,
+      title: "MySQL",
+      description: "Zarządzamy danymi za pomocą wydajnej bazy danych MySQL.",
+      background: `url(${mysqlBg}) center/cover no-repeat`,
+    },
+  ]
 
   useEffect(() => {
     anime({
@@ -19,17 +53,53 @@ const Home = () => {
       easing: "easeOutExpo",
       duration: 2000,
       delay: anime.stagger(100),
-    });
-  }, []);
+    })
+  }, [])
 
-  const handleExpand = (card) => {
-    setExpandedCard(expandedCard === card ? null : card);
-  };
+  const handleExpand = (cardId) => {
+    setExpandedCard((prevCard) => {
+      if (prevCard && prevCard === cardId) {
+        // Zwijanie
+        const cardIndex = techCardRefs.current.findIndex((card) => card.id === cardId)
+        anime({
+          targets: techCardRefs.current.slice(cardIndex + 1).map((card) => card.ref.current),
+          translateY: [10, 0],
+          opacity: [0.5, 1],
+          duration: 500,
+          easing: "easeOutBack",
+        })
+        return null
+      } else {
+        // Rozwijanie
+        return cardId
+      }
+    })
+  }
 
   const togglePhoneIcons = (e) => {
-    e.stopPropagation();
-    setIsOpen(!isOpen);
-  };
+    e.stopPropagation()
+    setIsOpen(!isOpen)
+  }
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1))
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1))
+  }
+
+  useEffect(() => {
+    sliderInterval.current = setInterval(() => {
+      nextSlide()
+    }, 10000) // Change slide every 10 seconds
+
+    return () => {
+      if (sliderInterval.current) {
+        clearInterval(sliderInterval.current)
+      }
+    }
+  }, [])
 
   return (
     <>
@@ -38,11 +108,18 @@ const Home = () => {
           <div className="content-texts">
             <div className="content-text1">
               <a>TWORZENIE</a>
-              <a><strong>STRON</strong></a>
-              <a id="ty"><strong>INTERNETOWYCH</strong></a>
+              <a>
+                <strong>STRON</strong>
+              </a>
+              <a id="ty">
+                <strong>INTERNETOWYCH</strong>
+              </a>
             </div>
             <div className="content-text2">
-              <a>Zaufaj naszym umiejętnościom i zleć nam projekt.<br /> Sumiennie wykonamy stronę wedle twoich preferencji</a>
+              <a>
+                Zaufaj naszym umiejętnościom i zleć nam projekt.
+                <br /> Sumiennie wykonamy stronę wedle twoich preferencji
+              </a>
               <div className="quotation">
                 <div className="quotationButton">SZYBKA WYCENA</div>
               </div>
@@ -70,42 +147,45 @@ const Home = () => {
         </div>
       </div>
 
-      <div className={`technologies ${expandedCard ? 'expanded' : ''}`}>
-        {[{
-          id: 'react',
-          logo: reactLogo,
-          alt: 'React',
-          description: 'React – to narzędzie do budowania stron internetowych, które sprawia, że są one szybkie i dynamiczne. Dzięki Reactowi strona nie musi się odświeżać w całości przy każdej zmianie, co sprawia, że działa płynniej i wygląda nowocześnie.'
-        }, {
-          id: 'anime',
-          logo: animeLogo,
-          alt: 'Anime.js',
-          description: 'Anime.js – to biblioteka, która pomaga dodawać animacje na stronach internetowych. Dzięki niej można sprawić, że elementy na stronie będą się poruszać, zmieniać kolory czy płynnie pojawiać się i znikać, co sprawia, że strona wygląda atrakcyjniej.'
-        }, {
-          id: 'mysql',
-          logo: mysqlLogo,
-          alt: 'MySQL',
-          description: 'MySQL – to baza danych, czyli miejsce, w którym strona internetowa przechowuje informacje, np. dane użytkowników, produkty w sklepie internetowym czy wpisy na blogu. Dzięki MySQL można szybko i bezpiecznie przechowywać i wyszukiwać te dane.'
-        }].map((tech, index) => (
-          <div
-            key={tech.id}
-            className={`tech-card ${expandedCard === tech.id ? 'expanded' : ''}`}
-            onClick={() => handleExpand(tech.id)}
-            style={{ order: expandedCard ? (expandedCard === tech.id ? 0 : index < ["react", "anime", "mysql"].indexOf(expandedCard) ? -1 : 1) : 0 }}
-          >
-            <div className="tech-front">
-              <img className="technology-logo" src={tech.logo} alt={tech.alt} />
-            </div>
-            {expandedCard === tech.id && (
-              <div className="tech-back">
-                {tech.description}
+      <div className="technologies">
+        <div className="slider-container">
+          {/* Slides container */}
+          <div className="slider-track" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+            {slides.map((slide) => (
+              <div key={slide.id} className="slide">
+                <div className="slide-content" style={{ background: slide.background }}>
+                  {/* Image section */}
+                  <div className="slide-image">
+                    <img src={slide.image || "/placeholder.svg"} alt={slide.title} />
+                  </div>
+
+                  {/* Text section */}
+                  <div className="slide-text">
+                    <h2>{slide.title}</h2>
+                    <p>{slide.description}</p>
+                  </div>
+                </div>
               </div>
-            )}
+            ))}
           </div>
-        ))}
+
+      
+          {/* Slide indicators */}
+          <div className="slider-indicators">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`slider-indicator ${currentSlide === index ? "slider-indicator-active" : ""}`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
+
