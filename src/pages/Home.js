@@ -121,7 +121,7 @@ const Home = () => {
                 <br /> Sumiennie wykonamy stronę wedle twoich preferencji
               </a>
               <div className="quotation">
-                <div className="quotationButton">SZYBKA WYCENA</div>
+                <button className="quotationButton">SZYBKA WYCENA</button>
               </div>
             </div>
           </div>
