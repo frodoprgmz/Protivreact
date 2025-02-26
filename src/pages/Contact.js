@@ -18,11 +18,11 @@ function Contact() {
 
   return (
     <div className="contact-container">
-      <h1 className="contact-title">Contact Us</h1>
+      <h1 className="contact-title">Skontaktuj się z Nami</h1>
       <div className="contact-layout">
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-group">
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">Imie</label>
             <input id="name" type="text" value={name} onChange={(e) => setName(e.target.value)} required />
           </div>
           <div className="form-group">
@@ -30,35 +30,35 @@ function Contact() {
             <input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
           </div>
           <div className="form-group">
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message">Wiadomość</label>
             <textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)} required />
           </div>
           <button type="submit" className="submit-button">
-            Send Message
+            Wyślij Wiadomość
           </button>
         </form>
 
         <div className="contact-info">
-          <h2>Get in Touch</h2>
+          <h2>Dane Kontaktowe</h2>
           <div className="info-group">
             <div className="info-item">
               <i className="icon phone-icon"></i>
-              <span>+1 (555) 123-4567</span>
+              <span>+48 213 742 069</span>
             </div>
             <div className="info-item">
               <i className="icon email-icon"></i>
-              <span>contact@example.com</span>
+              <span>Papież@gmail.com</span>
             </div>
             <div className="info-item">
               <i className="icon address-icon"></i>
-              <span>123 Main St, City, State 12345</span>
+              <span>Urzędnicza 2, 87-100, Toruń </span>
             </div>
           </div>
           <div className="business-hours">
-            <h3>Business Hours</h3>
-            <p>Monday - Friday: 9am - 5pm</p>
-            <p>Saturday: 10am - 2pm</p>
-            <p>Sunday: Closed</p>
+            <h3>Godziny Pracy</h3>
+            <p>Poniedziałek - Piątek: 14:00 - 20:00</p>
+            <p>Sobota: 10:00 - 15:00</p>
+            <p>Niedziela: Zamknięte</p>
           </div>
         </div>
       </div>
