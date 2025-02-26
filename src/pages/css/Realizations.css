@@ -1,14 +1,20 @@
 /* Główne style dla strony realizacji */
+body{
+    background: #121212;
+}
 .realizations-page {
-    margin-top: 80px;
+    margin-top: 0px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 1rem;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212; /* Ciemne tło */
+    color: #f0f0f0; /* Jasny tekst */
   }
   
   /* Nagłówek strony */
   .realizations-header {
+    margin-top: 30px;
     text-align: center;
     margin-bottom: 3rem;
   }
@@ -16,7 +22,7 @@
   .realizations-header h1 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #333;
+    color: #ffffff; /* Biały tekst */
     margin-bottom: 1rem;
     position: relative;
     display: inline-block;
@@ -30,13 +36,13 @@
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background-color: #3b82f6;
+    background-color: #f4cceb; /* Jasny różowy akcent */
     border-radius: 2px;
   }
   
   .subtitle {
     font-size: 1.1rem;
-    color: #666;
+    color: #a0aec0; /* Jasnoszary tekst */
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.6;
@@ -55,27 +61,27 @@
   .filter-label {
     margin-right: 1rem;
     font-weight: 500;
-    color: #555;
+    color: #a0aec0; /* Jasnoszary tekst */
   }
   
   .filter-button {
-    background-color: #f3f4f6;
+    background-color: #333333; /* Ciemniejsze tło przycisku */
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 30px;
     font-size: 0.9rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    color: #555;
+    color: #a0aec0; /* Jasnoszary tekst */
   }
   
   .filter-button:hover {
-    background-color: #e5e7eb;
+    background-color: #444444; /* Ciemniejsze tło po najechaniu */
   }
   
   .filter-button.active {
-    background-color: #3b82f6;
-    color: white;
+    background-color: #f4cceb; /* Jasny różowy akcent */
+    color: #222; /* Ciemny tekst */
   }
   
   /* Siatka projektów */
@@ -87,7 +93,7 @@
   
   /* Karta projektu */
   .project-card {
-    background-color: white;
+    background-color: #1f1f1f; /* Ciemniejsze tło karty */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -137,8 +143,8 @@
   }
   
   .view-project-btn {
-    background-color: #3b82f6;
-    color: white;
+    background-color: #f4cceb; /* Jasny różowy akcent */
+    color: #222; /* Ciemny tekst */
     border: none;
     padding: 0.6rem 1.2rem;
     border-radius: 5px;
@@ -148,7 +154,7 @@
   }
   
   .view-project-btn:hover {
-    background-color: #2563eb;
+    background-color: #f0b8e8; /* Ciemniejszy różowy po najechaniu */
   }
   
   /* Informacje o projekcie */
@@ -159,8 +165,8 @@
   .project-category {
     display: inline-block;
     font-size: 0.8rem;
-    background-color: #f3f4f6;
-    color: #4b5563;
+    background-color: #333333; /* Ciemniejsze tło kategorii */
+    color: #a0aec0; /* Jasnoszary tekst */
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
     margin-bottom: 0.8rem;
@@ -169,13 +175,13 @@
   .project-title {
     font-size: 1.2rem;
     font-weight: 600;
-    color: #333;
+    color: #ffffff; /* Biały tekst */
     margin-bottom: 0.8rem;
   }
   
   .project-description {
     font-size: 0.9rem;
-    color: #666;
+    color: #a0aec0; /* Jasnoszary tekst */
     line-height: 1.5;
   }
   
@@ -191,12 +197,11 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    padding: 1rem;
     overflow-y: auto;
   }
   
   .project-modal-content {
-    background-color: white;
+    background-color: #222222; /* Ciemne tło modala */
     border-radius: 10px;
     width: 100%;
     max-width: 1000px;
@@ -212,7 +217,7 @@
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(34, 34, 34, 0.8); /* Ciemne tło przycisku */
     border: none;
     width: 2rem;
     height: 2rem;
@@ -225,10 +230,11 @@
     justify-content: center;
     z-index: 10;
     transition: background-color 0.3s ease;
+    color: #a0aec0; /* Jasnoszary tekst */
   }
   
   .modal-close-btn:hover {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(34, 34, 34, 1); /* Ciemniejsze tło po najechaniu */
   }
   
   .modal-image {
@@ -250,8 +256,8 @@
   .modal-category {
     display: inline-block;
     font-size: 0.9rem;
-    background-color: #f3f4f6;
-    color: #4b5563;
+    background-color: #333333; /* Ciemniejsze tło kategorii */
+    color: #a0aec0; /* Jasnoszary tekst */
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
     margin-bottom: 1rem;
@@ -260,7 +266,7 @@
   .modal-title {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #333;
+    color: #ffffff; /* Biały tekst */
     margin-bottom: 1.5rem;
   }
   
@@ -270,16 +276,16 @@
     gap: 1rem;
     margin-bottom: 2rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid #333; /* Ciemniejsza linia */
   }
   
   .modal-detail-item {
     font-size: 0.95rem;
-    color: #555;
+    color: #a0aec0; /* Jasnoszary tekst */
   }
   
   .modal-detail-item strong {
-    color: #333;
+    color: #ffffff; /* Biały tekst */
     margin-right: 0.5rem;
   }
   
@@ -290,13 +296,13 @@
   .modal-description h3 {
     font-size: 1.2rem;
     font-weight: 600;
-    color: #333;
+    color: #ffffff; /* Biały tekst */
     margin-bottom: 1rem;
   }
   
   .modal-description p {
     font-size: 1rem;
-    color: #555;
+    color: #a0aec0; /* Jasnoszary tekst */
     line-height: 1.6;
   }
   
@@ -315,26 +321,34 @@
   }
   
   .modal-action-btn.primary {
-    background-color: #3b82f6;
-    color: white;
+    background-color: #f4cceb; /* Jasny różowy akcent */
+    color: #222; /* Ciemny tekst */
   }
   
   .modal-action-btn.primary:hover {
-    background-color: #2563eb;
+    background-color: #f0b8e8; /* Ciemniejszy różowy po najechaniu */
   }
   
   .modal-action-btn.secondary {
-    background-color: #f3f4f6;
-    color: #4b5563;
+    background-color: #333333; /* Ciemne tło przycisku */
+    color: #a0aec0; /* Jasnoszary tekst */
   }
   
   .modal-action-btn.secondary:hover {
-    background-color: #e5e7eb;
+    background-color: #444444; /* Ciemniejsze tło po najechaniu */
   }
-  
+  @media(max-width:1080px)
+  {
+    .project-modal-content{
+        width: 90%;
+    }
+  }
   /* Responsywność */
   @media (min-width: 768px) {
     .project-modal-content {
+        
+     
+
       flex-direction: row;
       max-height: 80vh;
     }
@@ -399,5 +413,4 @@
       flex-direction: column;
     }
   }
-  
   
