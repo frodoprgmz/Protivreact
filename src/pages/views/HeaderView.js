@@ -29,7 +29,7 @@ const HeaderView = ({ isMenuOpen, toggleMenu, navRef }) => {
       </nav>
 
       <div className='contact-now'>
-        <Link to="/contact" onClick={toggleMenu}><div className='contactButton'>KONTAKT</div></Link>
+        <Link to="/contact" onClick={toggleMenu}><button className='contactButton'>KONTAKT</button></Link>
       </div>
     </header>
   );

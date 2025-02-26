@@ -121,8 +121,7 @@
 .contactButton {
   background-color: transparent;
   color: #f4cceb;
-  width: 100%;
-  height: 80%;
+  padding: 10px 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,7 +129,7 @@
   border-radius: 50px;
   transition: 0.3s;
   border: 2px solid #f4cceb;
-  padding: 7px;
+
 }
 
 .contact-now a{
