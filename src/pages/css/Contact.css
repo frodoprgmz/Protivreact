@@ -65,13 +65,20 @@
     border: none;
     padding: 0.75rem 1rem;
     font-size: 1rem;
-    border-radius: 4px;
+    border-radius: 40px;
+    width: 70%;
+    margin: auto;
     cursor: pointer;
-    transition: background-color 0.2s;
+
+    border: 2px solid #f4cceb;
+    background-color: transparent;
+    transition: 0.3s;
   }
   
   .submit-button:hover {
-    background-color: #0051cc;
+    background-color: #f4cceb;
+    color: #19162A;
+    transition: 0.3s;
   }
   
   .contact-info h2 {
