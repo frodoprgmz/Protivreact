@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import anime from "animejs";
 import "./css/Home.css";
 import reactLogo from "../img/react-logo.png";
 import animeLogo from "../img/anime-logo.png";
@@ -6,9 +7,20 @@ import mysqlLogo from "../img/mysql-logo.png";
 import { Instagram, Facebook, Linkedin, Info, Github } from "lucide-react";
 import Footer from '../components/Footer';
 
-function Home() {
+const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [expandedCard, setExpandedCard] = useState(null);
+
+  useEffect(() => {
+    anime({
+      targets: ".content-texts a, .quotationButton",
+      translateX: [-200, 0],
+      opacity: [0, 1],
+      easing: "easeOutExpo",
+      duration: 2000,
+      delay: anime.stagger(100),
+    });
+  }, []);
 
   const handleExpand = (card) => {
     setExpandedCard(expandedCard === card ? null : card);
@@ -30,11 +42,9 @@ function Home() {
               <a id="ty"><strong>INTERNETOWYCH</strong></a>
             </div>
             <div className="content-text2">
-              <a>Zaufaj naszym umiejętnością i zleć nam projekt.<br /> Sumiennie wykonamy stronę wedle twoich preferencji</a>
+              <a>Zaufaj naszym umiejętnościom i zleć nam projekt.<br /> Sumiennie wykonamy stronę wedle twoich preferencji</a>
               <div className="quotation">
-                <div className='quotationButton'>
-                  SZYBKA WYCENA
-                </div>
+                <div className="quotationButton">SZYBKA WYCENA</div>
               </div>
             </div>
           </div>
@@ -55,16 +65,12 @@ function Home() {
                 </>
               )}
             </div>
-            <Info
-              className="social-media-icon info-icon"
-              onClick={togglePhoneIcons}
-            />
+            <Info className="social-media-icon info-icon" onClick={togglePhoneIcons} />
           </div>
         </div>
       </div>
 
       <div className={`technologies ${expandedCard ? 'expanded' : ''}`}>
-  
         {[{
           id: 'react',
           logo: reactLogo,
@@ -98,9 +104,8 @@ function Home() {
           </div>
         ))}
       </div>
-
     </>
   );
-}
+};
 
 export default Home;
