@@ -14,13 +14,6 @@
 
 }
 
-@font-face {
-  font-family: 'SpaceGrotesk';
-  src: url('/public/fonts/SpaceGrotesk/SpaceGrotesk-Bold.ttf') format('ttf');
-  font-weight: 700;
-  font-style: normal;
-}
-
 .header.scrolled {
   background: black;
 }
